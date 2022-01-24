@@ -5,20 +5,20 @@ function solution(A, K) {
     // write your code in JavaScript (Node.js 8.9.4)
     let result = [];
     let rotateNum;
-    const lengthA = A.length;
+    const N = A.length;
     
-    if(lengthA == 0 || K == 0 || lengthA == K)
+    if(N == 0 || K == 0 || N == K)
         return A;
     
-    if(lengthA>K) {
+    if(N>K) {
         rotateNum = K;
     } else {
-        rotateNum = lengthA%K;
+        rotateNum = K%N;
     }
 
-    const positionIndex = lengthA - rotateNum
+    const positionIndex = N - rotateNum
 
-    for(let i = positionIndex; i < lengthA; i++) {
+    for(let i = positionIndex; i < N; i++) {
         result.push(A[i]);
     }
     for(let i = 0 ; i < positionIndex; i++) {
