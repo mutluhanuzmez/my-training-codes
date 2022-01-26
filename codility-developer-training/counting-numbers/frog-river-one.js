@@ -1,6 +1,8 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
+// Find the earliest time when a frog can jump to the other side of a river.
+
 function solution(X, A) {
     // write your code in JavaScript (Node.js 8.9.4)
     let leaveMap = new Map();
