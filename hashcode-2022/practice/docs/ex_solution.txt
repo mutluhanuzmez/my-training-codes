@@ -1,0 +1,14 @@
+Our scores: A: 2 B: 5 C: 5 D: 1805 E: 2085 Total: 3902
+
+We first did a greedy graph algorithm for finding an approximate independent set (picking minimum degree node).
+Then we iteratively improved the solution with simulated annealing (basically random swapping and checking if the result becomes better).
+It found the solution of 2084 in E in 10 minutes, while A through D were found in a minute. 
+During a testrun of the code, we scored 2085 in E, but we didn't implement writing the best solutions to a file, so this solution is lost forever.
+
+Edit: Found another 2085 solution and saved the solution this time.
+
+For the swaps we actually did two different things:
+
+Swap a random pizza ingredient from "present on pizza" to "not present on pizza" or vice versa.
+Pick a random person that is currently not satisfied and swap all ingredients which prevent him from being satisfied.
+We did a 50/50 split between these two kinds of swaps, which seemed to get the best result.
